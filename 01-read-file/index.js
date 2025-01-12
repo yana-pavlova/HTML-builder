@@ -7,13 +7,13 @@ const readableStream = fs.createReadStream(filePath);
 let data = '';
 
 readableStream.on('data', (chunk) => {
-    data += chunk;
+  data += chunk;
 });
 
 readableStream.on('end', () => {
-    console.log(data);
+  console.log(data);
 });
 
 readableStream.on('error', (error) => {
-    console.error('Произошла ошибка при чтении файла:', error.message);
+  console.error('Error occurred while reading the file:', error.message);
 });
