@@ -15,5 +15,5 @@ readableStream.on('end', () => {
 });
 
 readableStream.on('error', (error) => {
-  console.error('Error occurred while reading the file:', error.message);
+  console.error('Error occurred while reading the file: ', error.message);
 });
