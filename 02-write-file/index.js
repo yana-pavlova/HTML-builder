@@ -15,7 +15,6 @@ process.on('SIGINT', () => {
 stdin.on('data', (data) => {
   console.log(data.toString());
   if (data.toString().trim() === 'exit') {
-    console.log('Terminating the program due to the keyword');
     process.exit();
   }
   writableStream.write(data);
