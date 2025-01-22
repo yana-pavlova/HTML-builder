@@ -13,7 +13,8 @@ process.on('SIGINT', () => {
 });
 
 stdin.on('data', (data) => {
-  if (data.toString().endsWith('exit\n')) {
+  console.log(data.toString());
+  if (data.toString().trim() === 'exit') {
     console.log('Terminating the program due to the keyword');
     process.exit();
   }
